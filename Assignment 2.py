@@ -42,11 +42,11 @@ if __name__ == '__main__':
 
     #creating bout_lengths_wt is done by creating a boolean array that tells us whether a Genotype value is wt or not. 
     #Then I got all the values in the Bout_Length column that were in the same position as the True values in the Boolean 
-    bout_lengths_wt = df['bout_length'][df['genotype'] == 'wt']
+    bout_lengths_wt = df[df.genotype=='wt'].bout_length
     
 
     #I did the same thing for the mutant types 
-    bout_lengths_mut= df['bout_length'][df['genotype'] == 'mut']
+    bout_lengths_mut= df[df.genotype=='mut'].bout_length
 
 
     #I then calculated the mean of each of the datasets
